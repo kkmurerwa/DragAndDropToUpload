@@ -28,7 +28,7 @@ img {
     display: block;
     margin: 0 auto;
     filter: opacity(0.5) drop-shadow(0 0 0 gray);
-    width: 35%;
+    width: 150px;
     height: auto;
 }
 
@@ -48,7 +48,7 @@ img {
     display: block;
     margin: 0 auto;
     padding: 10px;
-    width: 35%;
+    width: 40%;
     background: #ccc;
     cursor: pointer;
     border-radius: 5px;
