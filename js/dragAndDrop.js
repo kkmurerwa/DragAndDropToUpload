@@ -60,7 +60,7 @@ function previewFile(file) {
         if (window.matchMedia('(max-device-width: 700px)').matches) {
             placeholderImage.style.width = "auto";
             placeholderImage.style.height = "auto";
-            placeholderImage.style.maxHeight = "500px";
+            placeholderImage.style.maxHeight = "100px";
         } else {
             placeholderImage.style.width = "auto";
             placeholderImage.style.maxHeight = "300px";
