@@ -54,8 +54,12 @@ function previewFile(file) {
     reader.readAsDataURL(file)
     reader.onloadend = function() {
         placeholderImage.src = reader.result
-        placeholderImage.style.width = "35%"
         let placeholderText = document.getElementById("placeholder-text")
         placeholderText.style.display = "none"
+        if (window.matchMedia('(max-device-width: 700px)').matches) {
+            placeholderImage.style.width = "80%";
+        } else {
+            placeholderImage.style.width = "35%";
+        }
     }
 }
