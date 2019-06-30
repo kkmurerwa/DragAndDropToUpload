@@ -57,9 +57,9 @@ function previewFile(file) {
     reader.onloadend = function() {
         placeholderImage.src = reader.result
         placeholderText.innerHTML = "Image selected"
-        alert(placeholderImage.offsetHeight)
         if (window.matchMedia('(max-device-width: 700px)').matches) {
             placeholderImage.style.width = "80%";
+            placeholderImage.style.maxHeight = "500px";
         } else {
             placeholderImage.style.width = "auto";
             placeholderImage.style.maxHeight = "300px";
