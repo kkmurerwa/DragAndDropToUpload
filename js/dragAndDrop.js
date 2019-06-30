@@ -56,6 +56,7 @@ function previewFile(file) {
     reader.readAsDataURL(file)
     reader.onloadend = function() {
         placeholderImage.src = reader.result
+        placeHolders.style.color = "gray"
         placeholderText.innerHTML = "Image selected"
         if (window.matchMedia('(max-device-width: 700px)').matches) {
             placeholderImage.style.width = "auto";
