@@ -51,15 +51,23 @@ function handleFiles(files) {
 
 function previewFile(file) {
     let reader = new FileReader()
+    let buttonObject = document.getElementById("buttonSelect")
+    let placeholderText = document.getElementById("placeholder-text")
     reader.readAsDataURL(file)
     reader.onloadend = function() {
         placeholderImage.src = reader.result
-        let placeholderText = document.getElementById("placeholder-text")
-        placeholderText.style.display = "none"
+        placeholderText.innerHTML = "Image selected"
+        alert(placeholderImage.offsetHeight)
         if (window.matchMedia('(max-device-width: 700px)').matches) {
             placeholderImage.style.width = "80%";
         } else {
-            placeholderImage.style.width = "35%";
+            if (placeholderImage.offsetHeight >= 150) {
+                alert("I have been called")
+                placeholderImage.style.height = "200px";
+                placeholderImage.style.width = "auto";
+            } else {
+                placeholderImage.style.width = "35%";
+            }
         }
     }
 }
