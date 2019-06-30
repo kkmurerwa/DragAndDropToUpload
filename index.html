@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Drag and Drop</title>
+    <link rel="stylesheet" href="css/dragAndDrop.css">
+</head>
+
+<body>
+    <div id="drop-area">
+        <div id="gallery"></div>
+        <form class="my-form">
+            <div id="place-holders">
+                <img id="placeholder-image" src="img/image-upload.png" alt="Image icon placeholder">
+                <p id="placeholder-text">
+                    Drag and drop image here
+                </p>
+            </div>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+            <label class="button" for="fileElem">Select files to upload</label>
+        </form>
+
+
+
+    </div>
+    <script src="js/dragAndDrop.js"></script>
+</body>
+
+</html>

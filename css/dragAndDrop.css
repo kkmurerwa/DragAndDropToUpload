@@ -1,0 +1,75 @@
+body {
+    margin: 0%;
+}
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 480px;
+    font-family: sans-serif;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+#drop-area.highlight {
+    border-color: purple;
+}
+
+#place-holders {
+    margin: 20px 0;
+    padding: 50px;
+    border: 2px dotted gray;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    filter: opacity(0.5) drop-shadow(0 0 0 gray);
+    width: 100px;
+    height: auto;
+}
+
+.image-hovered {
+    filter: opacity(0.5) drop-shadow(0 0 0 green);
+}
+
+.image-dropped {
+    filter: opacity(1) drop-shadow(0 0 0 0);
+}
+
+.my-form {
+    margin-bottom: 10px;
+}
+
+#gallery {
+    margin-top: 10px;
+}
+
+#gallery img {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    width: 35%;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.button:hover {
+    background: lightgreen;
+    color: white;
+}
+
+#fileElem {
+    display: none;
+}
