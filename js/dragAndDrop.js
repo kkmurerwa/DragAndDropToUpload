@@ -61,13 +61,8 @@ function previewFile(file) {
         if (window.matchMedia('(max-device-width: 700px)').matches) {
             placeholderImage.style.width = "80%";
         } else {
-            if (placeholderImage.offsetHeight >= 150) {
-                alert("I have been called")
-                placeholderImage.style.height = "200px";
-                placeholderImage.style.width = "auto";
-            } else {
-                placeholderImage.style.width = "35%";
-            }
+            placeholderImage.style.width = "auto";
+            placeholderImage.style.maxHeight = "300px";
         }
     }
 }
