@@ -41,23 +41,20 @@ dropArea.addEventListener('drop', handleDrop, false)
 function handleDrop(e) {
     let dt = e.dataTransfer
     let files = dt.files
-        // alert(e.dataTransfer.readAsDataURL);
     handleFiles(files);
 }
 
 function handleFiles(files) {
-    // ([...files]).forEach(uploadFile)
     files = [...files]
     files.forEach(previewFile)
 }
 
 function previewFile(file) {
-    // alert("I have been called");
     let reader = new FileReader()
     reader.readAsDataURL(file)
     reader.onloadend = function() {
         placeholderImage.src = reader.result
-        placeholderImage.style.width = "300px"
+        placeholderImage.style.width = "35%"
         let placeholderText = document.getElementById("placeholder-text")
         placeholderText.style.display = "none"
     }
